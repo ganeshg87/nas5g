@@ -23,4 +23,26 @@ UE State Management:
 * Manages the state of User Equipment within the 5G network, handling transitions between states as per the 3GPP specifications.
 Error Handling and Logging:
 
-* Incorporates robust error handling mechanisms and logging functionalities to assist 
+* Incorporates robust error-handling mechanisms and logging functionalities to assist 
+
+### Build and run unit test cases
+```
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ g++ testNasMessage.cpp -o nasmsg -I ../.
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ ls
+main.cpp  nasmsg  testNasBuffer.cpp  testNasInformationElement.cpp  testNasMessage.cpp
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ ls
+main.cpp  nasmsg  testNasBuffer.cpp  testNasInformationElement.cpp  testNasMessage.cpp
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ g++ testNasInformationElement.cpp -o nasmsg -I ../.
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ ./nasmsg 
+Before Decode : 7e 
+After Decode  : 7e 
+ExtendedProtocolDiscriminator testcase successfull.
+Before Decode : 2e 
+After Decode  : 2e
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ g++ testNasBuffer.cpp -o nasmsg -I ../.
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ ./nasmsg 
+decoding successful..
+ganesh@ganesh-Latitude-3400:~/Ganesh/nas5g/test$ 
+
+```
+
